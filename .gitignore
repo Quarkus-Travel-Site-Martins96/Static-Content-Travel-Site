@@ -1,0 +1,14 @@
+*.bin
+*.tmp
+*.log
+
+.project
+.eclipse
+.vscode
+
+tmp/
+dist/
+node_modules/
+bin/
+log/
+logs/

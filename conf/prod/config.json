@@ -1,0 +1,6 @@
+{
+	"upload-path": "/path/to/upload",
+	"server-port": 5000,
+	"ca-path": "conf/ca.crt"
+
+}

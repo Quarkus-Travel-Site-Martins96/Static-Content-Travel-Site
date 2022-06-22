@@ -1,0 +1,41 @@
+{
+  "name": "static-content-travel-simple-site",
+  "version": "1.0.0",
+  "description": "Server for store static contents, like Pictures, Web files, ecc..",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json",
+    "prod": "ts-node ./src/main.ts --profile=prod --conf-file-path=conf/prod/config.json",
+    "serve": "nodemon --exec \"npm run dev\"",
+    "debug": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json --inspect"
+  },
+  "keywords": [
+    "travel-simple-site",
+    "static-server",
+    "static-content"
+  ],
+  "author": "Luca Martinelli",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-fileupload": "^1.3.1",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.2.2",
+    "@types/lodash": "^4.14.182",
+    "@types/minimist": "^1.2.2",
+    "@types/morgan": "^1.9.3",
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15"
+  }
+}
