@@ -49,4 +49,5 @@ https.createServer(options, app)
 
 API.exposeHealthService(app);
 API.exposeUploadService(app, uploadPath);
+API.exposeGetMedia(app, uploadPath);
 

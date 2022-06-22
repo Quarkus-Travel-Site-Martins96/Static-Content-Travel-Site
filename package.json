@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json",
-    "prod": "ts-node ./src/main.ts --profile=prod --conf-file-path=conf/prod/config.json",
+    "prod": "ts-node ./src/main.ts --profile=prod --conf-file-path=conf/config.json",
     "serve": "nodemon --exec \"npm run dev\"",
     "debug": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json --inspect"
   },

@@ -1,9 +1,19 @@
 FROM mhart/alpine-node
 
 LABEL author="Luca Martinelli"
-LABEL name="travelsite-static"
+LABEL name="static-content-travelsite"
 
+RUN mkdir /opt/app && mkdir /opt/app/conf && mkdir /opt/app/src && mkdir /opt/medias
+WORKDIR /opt/app
 
-EXPOSE 80
+COPY package*.json ./
+COPY src ./src/
+ADD ["staticcontent-config.json", "/opt/app/conf/config.json"]
 
-#CMD ["nginx", "-g", "daemon off;"]
+#for the moment set here, but move certificate to another place like secrets on Openshift
+COPY conf/prod/*.pem ./conf/
+
+RUN npm install
+
+EXPOSE 5000
+CMD [ "npm", "run", "prod" ]

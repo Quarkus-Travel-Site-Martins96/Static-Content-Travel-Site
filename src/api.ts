@@ -1,5 +1,7 @@
 import { Express } from "express";
 import { UploadedFile } from "express-fileupload";
+import { existsSync } from "fs";
+import { resolve } from "path";
 
 export class API {
 
@@ -63,5 +65,23 @@ export class API {
             }
         });
     }
+
+	public static exposeGetMedia(app: Express, uploadPath: string) {
+		app.get('/get/:filename', (req, res) => {
+            console.debug("Incoming request: ");
+			console.debug(req.params.filename);
+			const filename: string = req.params.filename;
+			const file: string = uploadPath + "/" + filename; 
+			console.debug("Load file: [" + file + "]");
+			
+			if (!existsSync(file)) {
+				console.warn("File requested [" + filename + "] not found");
+				res.status(404).send(filename + " not found");
+				return;
+			}
+			
+			res.sendFile(resolve(file));
+		});
+	}
 
 }
