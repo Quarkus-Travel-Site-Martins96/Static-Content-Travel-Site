@@ -8,7 +8,7 @@ WORKDIR /opt/app
 
 COPY package*.json ./
 COPY src ./src/
-ADD ["staticcontent-config.json", "/opt/app/conf/config.json"]
+ADD ["config.json", "/opt/app/conf/config.json"]
 
 #for the moment set here, but move certificate to another place like secrets on Openshift
 COPY conf/prod/*.pem ./conf/
