@@ -30,7 +30,9 @@ app.use(fileUpload({
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(morgan('dev'));
+
+if (argProfile && "dev" === argProfile)
+	app.use(morgan('dev'));
 
 https.createServer(options, app)
     .listen(serverPort, () => {

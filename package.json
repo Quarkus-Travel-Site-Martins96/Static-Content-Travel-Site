@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json",
-    "prod": "ts-node ./src/main.ts --profile=prod --conf-file-path=conf/config.json",
+    "prod": "node ./src/main.js --profile=prod --conf-file-path=conf/config.json",
     "serve": "nodemon --exec \"npm run dev\"",
     "debug": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/config.json --inspect"
   },
@@ -25,7 +25,6 @@
     "lodash": "^4.17.21",
     "minimist": "^1.2.6",
     "morgan": "^1.10.0",
-    "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
   "devDependencies": {
@@ -35,6 +34,7 @@
     "@types/lodash": "^4.14.182",
     "@types/minimist": "^1.2.2",
     "@types/morgan": "^1.9.3",
+    "ts-node": "^10.7.0",
     "eslint": "^8.13.0",
     "nodemon": "^2.0.15"
   }

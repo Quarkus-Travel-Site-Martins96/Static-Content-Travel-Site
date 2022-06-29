@@ -1,0 +1,26 @@
+#This script load Dockerfile from local file system instead of take it from Git repo
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: "static-content-travel-site" 
+  label:
+    app: travelsite
+    name: static-content
+spec:
+  runPolicy: "Serial"
+  source:
+    type: Binary
+    binary:
+      asFile: "Dockerfile"
+    contextDir: .
+    configMaps:
+    - configMap:
+        name: staticcontent-config.json
+  strategy:
+    type: Docker                      
+    dockerStrategy:
+      dockerfilePath: "."
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "static-content-travel-site:latest"
