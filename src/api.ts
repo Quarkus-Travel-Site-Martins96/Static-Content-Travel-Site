@@ -83,5 +83,14 @@ export class API {
 			res.sendFile(resolve(file));
 		});
 	}
+	
+	public static isUserAvatarExistsService(app: Express, uploadPath: string) {
+        app.get('/avatarExists/:filename', (req, res) => {
+            const filename: string = req.params.filename;
+			const file: string = uploadPath + "/" + filename;
+			res.status(200).send(existsSync(file));
+			return;
+        })
+    }
 
 }

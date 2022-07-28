@@ -41,7 +41,7 @@ oc new-app static-content-travel-site --name=static-content-travelsite
 Expose in a route the service with:
 
 ```shell script
-oc expose service/static-content-travelsite
+oc create route passthrough --service static-content-travelsite
 ```
 
 ##Access
