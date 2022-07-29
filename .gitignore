@@ -6,7 +6,6 @@
 .eclipse
 .vscode
 
-tmp/
 dist/
 node_modules/
 bin/
