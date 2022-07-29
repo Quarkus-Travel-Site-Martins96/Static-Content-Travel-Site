@@ -21,10 +21,9 @@ export class API {
             console.debug("Incoming request: ");
             //console.debug(req);
             console.debug(req.files);
-        
-            if (!(req as any).client.authorized) {
-                return res.status(401).send('Invalid client certificate authentication.');
-            }
+
+			/** ADD call to login validate JWT token */
+
             
             try {
                 if(!req.files) {

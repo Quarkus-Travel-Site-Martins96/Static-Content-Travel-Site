@@ -55,36 +55,6 @@ export class PropertiesLoader {
 		
 		return port;
 	}
-
-	public static getCACertificatePath(): string {
-		let caPath: string = PropertiesLoader.getConfPropery("ca-path");
-		if (!caPath) {
-			console.warn("Missing configuration for key 'ca-path', using default (conf/dev/ca-cert.pem)");
-			return "conf/dev/ca-cert.crt";
-		}
-		
-		return caPath;
-	}
-
-	public static getServerCertificatePath(): string {
-		let caPath: string = PropertiesLoader.getConfPropery("cert-path");
-		if (!caPath) {
-			console.warn("Missing configuration for key 'cert-path', using default (conf/dev/server-cert.pem)");
-			return "conf/dev/server-cert.pem";
-		}
-		
-		return caPath;
-	}
-
-	public static getServerKeyPath(): string {
-		let caPath: string = PropertiesLoader.getConfPropery("key-path");
-		if (!caPath) {
-			console.warn("Missing configuration for key 'key-path', using default (conf/dev/server-key.pem)");
-			return "conf/dev/server-key.pem";
-		}
-		
-		return caPath;
-	}
 	
 	
 	private static isPositiveInteger(str: any): boolean {
