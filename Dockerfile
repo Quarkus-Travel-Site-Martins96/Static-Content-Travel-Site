@@ -11,7 +11,7 @@ COPY src ./src/
 ADD ["config.json", "/opt/app/conf/config.json"]
 
 #This is for data starting up, remove if you need a clean statement
-COPY tmp/* /opt/medias
+COPY tmp /opt/medias
 
 
 RUN npm install -g typescript && \
