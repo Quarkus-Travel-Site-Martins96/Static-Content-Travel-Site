@@ -7,7 +7,7 @@ RUN mkdir /opt/app && mkdir /opt/app/conf && mkdir /opt/app/src && mkdir /opt/me
 WORKDIR /opt/app
 
 #This is for data starting up, remove if you need a clean statement
-COPY tmp /opt/medias
+COPY tmp ../medias/
 
 COPY package*.json ./
 COPY src ./src/
