@@ -1,4 +1,4 @@
-FROM node:17.9.0-alpine
+FROM node:18-alpine
 
 LABEL author="Luca Martinelli"
 LABEL name="static-content-travelsite"
@@ -10,8 +10,9 @@ COPY package*.json ./
 COPY src ./src/
 ADD ["config.json", "/opt/app/conf/config.json"]
 
-#for the moment set here, but move certificate to another place like secrets on Openshift
-COPY conf/prod/*.pem ./conf/
+#This is for data starting up, remove if you need a clean statement
+COPY tmp/* /opt/medias
+
 
 RUN npm install -g typescript && \
 	npm install && \

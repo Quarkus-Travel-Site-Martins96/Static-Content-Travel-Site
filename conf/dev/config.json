@@ -1,8 +1,5 @@
 {
 	"upload-path": "tmp/",
-	"server-port": 5000,
-	"ca-path": "conf/dev/ca-cert.pem",
-	"cert-path": "conf/dev/server-cert.pem",
-	"key-path": "conf/dev/server-key.pem"
+	"server-port": 5000
 
 }
