@@ -11,7 +11,7 @@ COPY tmp ../medias/
 
 COPY package*.json ./
 COPY src ./src/
-ADD ["config.json", "/opt/app/conf/config.json"]
+ADD ["static-content-config.json", "/opt/app/conf/static-content-config.json"]
 
 
 RUN npm install -g typescript && \
