@@ -14,7 +14,7 @@ spec:
     contextDir: .
     configMaps:
     - configMap:
-        name: static-content-config
+        name: static-content-config.json
   strategy:
     type: Docker                      
     dockerStrategy:
