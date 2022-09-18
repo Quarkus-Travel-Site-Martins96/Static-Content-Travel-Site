@@ -4,9 +4,10 @@
   "description": "Server for store static contents, like Pictures, Web files, ecc..",
   "main": "main.ts",
   "scripts": {
+    "start": "node ./src/main.js --profile=prod --conf-file-path=conf/prod/static-content-config.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/static-content-config.json",
-    "prod": "node ./src/main.js --profile=prod --conf-file-path=conf/static-content-config.json",
+    "prod": "node ./src/main.js --profile=prod --conf-file-path=conf/prod/static-content-config.json",
     "serve": "nodemon --exec \"npm run dev\"",
     "debug": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/static-content-config.json --inspect"
   },

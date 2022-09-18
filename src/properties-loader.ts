@@ -8,7 +8,7 @@ export class PropertiesLoader {
 		const args = minimist(process.argv.slice(2));
 		let path: string = args['conf-file-path'];
 		if (!path)
-			return 'conf/dev/config.json';
+			return 'conf/dev/static-content-config.json';
 		return path;
 	}
 

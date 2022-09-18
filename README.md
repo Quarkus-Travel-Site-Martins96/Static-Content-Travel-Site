@@ -58,7 +58,7 @@ The path exposed are:
 
 ###Build image and push
 
-Using _hub.docker.com_, build localy the image using docker client
+Using *hub.docker.com*, build localy the image using docker client
 
 
 ```shell script
@@ -86,7 +86,7 @@ docker push username/static-content-travelsite
 After login in Openshift via OC cli, create a new app using the docker image
 
 ```shell script
-oc new-app --as-deployment-config -lapp=static-content --docker-image username/static-content-travelsite
+oc new-app --as-deployment-config -lapp=static-content --image username/static-content-travelsite
 ```
 
 Your static content server is up and running
