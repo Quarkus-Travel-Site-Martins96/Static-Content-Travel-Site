@@ -6,7 +6,7 @@
   "scripts": {
   	"build": "tsc",
   	"postinstall": "npm run build",
-    "start": "node ./main.js --profile=dev --conf-file-path=conf/prod/static-content-config.json",
+    "start": "node ./src/main.js --profile=dev --conf-file-path=conf/prod/static-content-config.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node ./src/main.ts --profile=dev --conf-file-path=conf/dev/static-content-config.json",
     "prod": "node ./src/main.js --profile=prod --conf-file-path=conf/prod/static-content-config.json",
