@@ -1,5 +1,5 @@
 {
 	"upload-path": "/opt/medias",
-	"server-port": 5000
+	"server-port": 8080
 
 }
