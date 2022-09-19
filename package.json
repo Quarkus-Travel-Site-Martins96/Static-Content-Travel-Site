@@ -2,6 +2,8 @@
   "name": "static-content-travel-simple-site",
   "version": "1.0.0",
   "description": "Server for store static contents, like Pictures, Web files, ecc..",
+  "author": "Luca Martinelli",
+  "license": "GPL-3.0",
   "main": "main.ts",
   "scripts": {
   	"build": "tsc",
@@ -18,8 +20,10 @@
     "static-server",
     "static-content"
   ],
-  "author": "Luca Martinelli",
-  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quarkus-Travel-Site-Martins96/Static-Content-Travel-Site"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",

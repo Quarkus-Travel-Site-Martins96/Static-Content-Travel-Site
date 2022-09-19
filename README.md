@@ -4,34 +4,17 @@ Here the commands to create the service on Openshift.
 
 Server is wrote on NodeJS
 
-## Build database container (ephemeral)
-In order to build server container (NodeJS) prepare the config properties in a configmap:
+## Build container and run (ephemeral)
+Use this command to create and build the application using the code from Github
 
 ```shell script
-oc create configmap staticcontent-config.json --from-file=conf/prod/config.json
-```
-Now on your Openshift project you will have a new ConfigMap usable on build.
-
-Create the stream where put the build result:
-
-```shell script
-oc create is static-content-travel-site
-```
-This need for the BuildConfig.spec.output
-
-Create BuildConfig using:
-
-```shell script
-oc create -f ./build-config-openshift.yml
+oc new-app "https://github.com/Quarkus-Travel-Site-Martins96/Static-Content-Travel-Site" --name=static-content-travelsite --strategy=source
 ```
 
-Start build on Openshift:
-
-```shell script
-oc start-build static-content-travel-site
-```
+The result will be a BuildConfiguration created and a new build will be auto-triggered.
 
 ##Deploy container
+**Not working yet on Openshift, can be used on Docker/Kubernetes**
 For run the builded image stream run:
 
 ```shell script
