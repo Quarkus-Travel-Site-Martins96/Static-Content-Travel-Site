@@ -3,11 +3,11 @@ FROM node:18-alpine
 LABEL author="Luca Martinelli"
 LABEL name="static-content-travelsite"
 
-RUN mkdir /opt/app && mkdir /opt/app/conf && mkdir /opt/app/src && mkdir /opt/medias
+RUN mkdir /opt/app && mkdir /opt/app/conf && mkdir /opt/app/src && mkdir /opt/app/medias
 WORKDIR /opt/app
 
 #Sample data
-COPY tmp ../medias/
+COPY medias ./medias/
 
 COPY package*.json ./
 COPY src ./src/

@@ -13,20 +13,6 @@ oc new-app "https://github.com/Quarkus-Travel-Site-Martins96/Static-Content-Trav
 
 The result will be a BuildConfiguration created and a new build will be auto-triggered.
 
-##Deploy container
-**Not working yet on Openshift, can be used on Docker/Kubernetes**
-For run the builded image stream run:
-
-```shell script
-oc new-app static-content-travel-site --name=static-content-travelsite
-```
-
-Expose in a route the service with:
-
-```shell script
-oc create route passthrough --service static-content-travelsite
-```
-
 ##Access
 
 Your server now is accessible on browser.
@@ -38,6 +24,8 @@ The path exposed are:
  
 
 ## Building from external registry
+
+**Not working yet on Openshift, can be used on Docker/Kubernetes**
 
 ###Build image and push
 
@@ -66,7 +54,7 @@ Push image
 docker push username/static-content-travelsite
 ```
 
-After login in Openshift via OC cli, create a new app using the docker image
+After login in Openshift via OC cli, create a new app using the docker image (not working)
 
 ```shell script
 oc new-app --as-deployment-config -lapp=static-content --image username/static-content-travelsite

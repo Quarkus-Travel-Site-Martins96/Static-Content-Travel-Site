@@ -1,8 +1,0 @@
-{
-	"upload-path": "/opt/medias",
-	"server-port": 5000,
-	"ca-path": "conf/ca-cert.pem",
-	"cert-path": "conf/server-cert.pem",
-	"key-path": "conf/server-key.pem"
-
-}
